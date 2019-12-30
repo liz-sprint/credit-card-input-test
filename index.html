@@ -2,8 +2,17 @@
     <head></head>
     <body>
         <form id="payment">
-            <input attribute="cc-name" /> 
-            <input autocomplete=""attribute="cc-number" />
+                <label for="frmNameCC">Name on card</label>
+                <input name="ccname" id="frmNameCC" required placeholder="Full Name" autocomplete="cc-name">
+                
+                <label for="frmCCNum">Card Number</label>
+                <input name="cardnumber" id="frmCCNum" required autocomplete="cc-number"  pattern="\d*" maxlength="19" type="tel" >
+                
+                <label for="frmCCCVC">CVC</label>
+                <input name="cvc" id="frmCCCVC" required autocomplete="cc-csc" pattern="\d*" maxlength="4" placeholder="CVC" >
+                
+                <label for="frmCCExp">Expiry</label>
+                <input name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp" type="tel" pattern="\d*" maxlength="7" >
         </form>
     </body>
 </html>
